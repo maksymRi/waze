@@ -1,0 +1,96 @@
+.badges {
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	
+	/// Lights, camera, action!
+	&__item {
+		$self: &;
+		$item-width: 55px;
+		$item-height: $item-width;
+		
+		display: none;
+		width: $item-width;
+		height: $item-height;
+		border-radius: 50%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		&:not(:nth-child(n+5)) {
+			display: block;
+			
+			~ #{$self}_view-all {
+				display: flex;
+			}
+		}
+
+		@include breakpoint(sm) {
+			&:not(:nth-child(n+7)) {
+				display: block;
+				
+				~ #{$self}_view-all {
+					display: flex;
+				}
+			}
+		}
+
+		@include breakpoint(md) {
+			&:not(:nth-child(n+10)) {
+				display: block;
+				
+				~ #{$self}_view-all {
+					display: flex;
+				}
+			}
+		}
+		
+		& + & {
+			margin-left: 15px;
+		}
+
+		&_beta-tester-leader {
+			background-image: url(/images/beta-tester-leader.png);
+		}
+		&_carpooler-master {
+			background-image: url(/images/carpooler-master.png);
+		}
+		&_carpooler-us {
+			background-image: url(/images/carpooler-us.png);
+		}
+		&_champ-global {
+			background-image: url(/images/champ-global.png);
+		}
+		&_champ-retired {
+			background-image: url(/images/champ-retired.png);
+		}
+		&_coordinator-country {
+			background-image: url(/images/coordinator-country.png);
+		}
+		&_editor-level {
+			background-image: url(/images/editor-level.png);
+		}
+		&_gep-partner {
+			background-image: url(/images/gep-partner.png);
+		}
+		&_manager-region {
+			background-image: url(/images/manager-region.png);
+		}
+		&_view-all {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background-color: #fff;
+			box-shadow: rgba(#000, .2);
+			font-size: 12px;
+			line-height: 13px;
+			text-align: center;
+			color: #4e4e4e;
+			cursor: pointer;
+		}
+	}
+	/// EO Lights, camera, action!
+}

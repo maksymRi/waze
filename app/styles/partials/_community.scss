@@ -1,0 +1,46 @@
+.community {
+	padding-top: 20px;
+	padding-bottom: 31px;
+	background-color: #83d6ed;
+
+	&__wrap {
+		@include breakpoint(md) {
+			display: flex;
+		}		
+	}
+
+	@include breakpoint(md) {
+		margin-bottom: 20px 24px;
+	}
+
+	&__item {
+		& + & {
+			margin-top: 27px;
+		}
+
+		@include breakpoint(md) {
+			flex: 1;
+
+			& + & {
+				margin-top: 0;
+				margin-left: 62px;
+			}
+		}
+	}
+
+	&__heading {
+		margin-top: 0;
+		margin-bottom: 15px;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 19px;
+		text-transform: uppercase;
+		text-align: center;	
+		color: #355472;
+
+		@include breakpoint(md) {
+			margin-bottom: 13px;
+			text-align: left;
+		}
+	}
+}

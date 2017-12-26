@@ -1,0 +1,35 @@
+body {
+	box-sizing: border-box;
+	min-width: $global-min-width;
+	font-family: $main-ff;
+}
+
+* {
+	&,
+	&:before,
+	&:after {
+		box-sizing: inherit;
+	}
+}
+
+.container {
+	max-width: $global-max-width;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.button {
+	border: 0;
+	padding-left: 27px;
+	padding-right: 27px;
+	background: linear-gradient(46deg, #ff8565 , #ff6d66);
+	border-radius: 20px;
+	font-size: 13px;
+	font-weight: 700;
+	line-height: 36px;
+	text-transform: uppercase;
+	color: #fff;
+	cursor: pointer;
+}

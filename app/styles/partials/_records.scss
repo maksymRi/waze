@@ -1,0 +1,61 @@
+.records {
+	$icon-width: 45px;
+	$icon-height: $icon-width;
+
+	display: flex;
+    justify-content: space-around;
+	list-style-type: none;
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 27px;
+
+	@include breakpoint(md) {
+		justify-content: space-between;
+	}
+
+
+	&__item {
+		$icon-right-shift: 8px;
+
+		position: relative;
+		text-align: center;
+
+		@include breakpoint(md) {
+	    	padding-left: $icon-width + $icon-right-shift;
+	    	text-align: left;
+	    }
+	}
+
+	&__icon-wrap {
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+		width: $icon-width;
+		height: $icon-height;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 16px;
+		border: 2px solid #fff;
+		border-radius: 50%;
+
+	    @include breakpoint(md) {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+	    }
+	}
+
+	&__number {
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 20px;
+		color: #355472;
+	}
+
+	&__description {
+		font-size: 12px;
+		line-height: 16px;
+		color: #355472;
+	}
+}
